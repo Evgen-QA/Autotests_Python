@@ -42,3 +42,11 @@ class ProductPage(BasePage):
         name_from_form = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME_FROM_FORM).text
         assert product_name == name_from_form, f"Names are different: product name = '{product_name}' and name " \
                                                f"from form = '{name_from_form}'"
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.PRODUCT_ADDED_FORM), \
+            "Success message is presented, but should not be"
+
+    def should_be_success_message_disappear(self):
+        assert self.is_disappeared(*ProductPageLocators.PRODUCT_ADDED_FORM), \
+            "Success message is presented, but should disappear"
