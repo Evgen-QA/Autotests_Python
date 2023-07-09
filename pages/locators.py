@@ -22,3 +22,9 @@ class ProductPageLocators():
     PRODUCT_ADDED_FORM = (By.CSS_SELECTOR, ".alert-success:nth-child(1)")
     PRODUCT_NAME = (By.CSS_SELECTOR, ".product_main h1")
     PRODUCT_NAME_FROM_FORM = (By.CSS_SELECTOR, ".alert-success:nth-child(1) strong")
+
+
+class BasketPageLocators():
+    BASKET_BTN = (By.CSS_SELECTOR, ".btn-group a.btn")
+    BASKET_EMPTY_MESSAGE = (By.CSS_SELECTOR, "#content_inner")
+    BASKET_ITEMS = (By.CSS_SELECTOR, ".basket-items")
